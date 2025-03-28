@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DOLCE GELATO- INICIO</title>
+
+    <!-- hojas de estilo personalizadas -->
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="styles/mediaQueries.css">
+    <link rel="stylesheet" href="styles/swiper-bundle.min.css">
+    <link rel="stylesheet" href="styles/popup.css">
+    <link rel="stylesheet" href="styles/style3.css">
+    <link rel="stylesheet" href="styles/cursor.css">
+    <link rel="stylesheet" href="styles/topscrollindicator.css">
+
+    <!-- enlace para agregar favicon -->
+    <link rel="icon" href="./images/logo.png" type="image/png">
+
+    <!-- script de iconos de font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <!-- cursor -->
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+
+    <!-- Cargador -->
+    <div id="preloader">
+        <div class="loader-container">
+            <div class="flavor-circle chocolate"></div>
+            <div class="flavor-circle strawberry"></div>
+            <div class="flavor-circle vanilla"></div>
+            <div class="flavor-circle mint"></div>
+            <div class="flavor-circle blueberry"></div>
+            <div class="flavor-circle mango"></div>
+            <div class="flavor-circle pistachio"></div>
+            <div class="flavor-circle raspberry"></div>
+        </div>
+    </div>
+
+    <!-- barra de progreso de desplazamiento -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- barra de navegación -->
+    <div class="nav-bar">
+        <div class="logo">
+            <img src="./images/logo.png" alt="icyco-logo" height="40px" width="40px">
+            <a href="./index.html">DOLCE GELATO</a>
+        </div>
+        <div class="nav-links">
+            <a href="./index.html" class="link active">Inicio</a>
+            <a href="./products.html" class="link">Productos</a>
+            
+        </div>
+        <div class="icons">
+            <div class="icon">
+                <a href="./login.html"><i class="fa fa-user" aria-hidden="true"></i></a>
+            </div>
+            <div class="icon">
+                <span class="i"><i class="fa fa-shopping-cart cart-icon" aria-hidden="true"></i> <span
+                        class="no-of-cart-items">0</span></span>
+            </div>
+            <div class="icon">
+                <i class="fa fa-bars menu" aria-hidden="true" id="menu-icon"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- Carrito -->
+    <div class="cart">
+        <i class="fa fa-times close-cart" aria-hidden="true"></i>
+        <h1>Tu Carrito</h1>
+
+        <div class="no-empty-cart">
+            <ul class="cart-list-items">
+            </ul>
+            <div>
+                <div class="total">Subtotal: <span class="sub-total">$0</span></div>
+                <button>Finalizar compra</button>
+            </div>
+
+        </div>
+
+        <div class="empty-cart active">
+            <div class="empty-cart-img-div">
+                <img src="images/empty-cart.png" alt="Deliciosa Helado" class="ice-cream-image" />
+            </div>
+            <p class="empty-cart-text">¡Tu carrito está vacío!</p>
+            <p class="empty-cart-info">¡Como un cono sin helado!🍦 </p>
+            <p class="empty-cart-info">¡Rellénalo con nuestros deliciosos sabores!</p>
+        </div>
+    </div>
+
+    <!-- Héroe -->
+    <section class="home" id="home">
+        <div class="text">
+            <h1>¡Sumérgete en la felicidad, en cualquier momento y lugar!</h1>
+            <h4>¡Bienvenido al festín congelado, donde el mundo de los deleites congelados cobra vida! Prepárate para embarcarte en
+                un viaje delicioso a través de un paraíso virtual de helados. Ya sea que anheles un delicioso
+                tratamiento en la tienda, entrega a tu puerta, o una experiencia de helado personalizada en tu próximo evento, estamos aquí para
+                servirte los momentos más dulces, dondequiera que estés.</h4>
+            <a href="./products.html"><button style="margin-top: 15px;">Ordena Ahora</button></a>
+        </div>
+        <div class="grid">
+            <div class="grid-box"></div>
+            <div class="grid-box"></div>
+            <div class="grid-box"></div>
+            <div class="grid-box"></div>
+        </div>
+    </section>
+
+    <!-- Nuestros Sabores -->
+    <section id="our-flavors">
+        <h1>Encuentra Tu Sabor</h1>
+        <div class="flavors-container bottomani"></div>
+    </section>
+
+    <!-- Servicios -->
+    
+
+
+    <!-- Ventana emergente para registro de correo electrónico -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <div class="popup-left">
+                <img src="images/popupice.jpg" alt="Imagen de Descuento">
+            </div>
+            <div class="popup-right">
+                <h1>¡Espera!</h1>
+                <h2>Obtén un dulce trato antes de que se derrita..</h2>
+                <p>Obtén un 30% de descuento en tu primer pedido cuando te registres.</p>
+                <form id="emailForm">
+                    <input type="email" id="popup-email" placeholder="Ingresa tu correo electrónico" required>
+                    <button type="submit" class="signup-btn">Continuar</button>
+                </form>
+                <a href="#" class="no-thanks close-btn">No gracias</a>
+                <p class="terms">Al hacer clic en continuar, aceptas nuestros <a href="terms&condition.html">Términos de
+                        Servicio</a> y <a href="privacy.html">Política de Privacidad</a>.</p>
+            </div>
+            <span class="close-btn" id="close-btn2">&times; </span>
+        </div>
+    </div>
+
+    <!-- Acerca de -->
+    <section class="about" id="about">
+        <div class="box-container about-box">
+            <h2 class="rightani">¡Refresca con nuestras creaciones cremosas!</h2>
+            <p class="leftani">En IcyCo, somos más que una empresa: somos una comunidad impulsada por una visión compartida
+                y
+                un compromiso con la excelencia. Estamos emocionados de continuar y expandir nuestro negocio mientras nos mantenemos fieles
+                a nuestras raíces y a los valores que nos definen. ¡Ven a visitarnos y creemos juntos recuerdos dulces!
+            </p>
+        </div>
+    </section>
+
+    <!-- ¿POR QUÉ icyCO? -->
+    <section class="why-icyco">
+        <h1>¿Por qué DOLCE GELATO?</h1>
+        <div class="feature-container">
+            <div class="inner">
+                <div class="feature-box rightani">
+                    <div class="icon-circle">
+                        <img src="images/flavour-icon.png" alt="Ícono de Sabores">
+                    </div>
+                    <div class="feature-text">
+                        <h3>Variedad de Sabores</h3>
+                        <p>Desde la clásica vainilla hasta el exótico matcha, Icyco ofrece una amplia gama de sabores para satisfacer cada
+                            paladar.</p>
+                    </div>
+                </div>
+                <div class="feature-box leftani">
+                    <div class="icon-circle ">
+                        <img src="images/hygiene-icon.png" alt="Ícono de Higiene">
+                    </div>
+                    <div class="feature-text">
+                        <h3>Higiene y Seguridad Alimentaria</h3>
+                        <p>Mantenemos los más altos estándares de higiene, asegurando que cada cucharada sea segura y deliciosa.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="inner">
+                <div class="feature-box rightani">
+                    <div class="icon-circle">
+                        <img src="images/quality-icon.png" alt="Ícono de Ingredientes de Calidad">
+                    </div>
+                    <div class="feature-text">
+                        <h3>Mejores Ingredientes de Calidad</h3>
+                        <p>Solo los mejores ingredientes entran en nuestro helado, para una experiencia rica e inolvidable.</p>
+                    </div>
+                </div>
+                <div class="feature-box leftani">
+                    <div class="icon-circle">
+                        <img src="images/friendly-icon.png" alt="Ícono de Ambiente Amigable">
+                    </div>
+                    <div class="feature-text">
+                        <h3>Ambiente Divertido y Amigable</h3>
+                        <p>Nuestros locales están diseñados para ser divertidos e invitar, haciendo de cada visita un dulce recuerdo.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- reseñas -->
+    <section class="reviewSection" id="reviewsSection">
+        <h1>Mejores Reseñas</h1>
+        <div class="reviews">
+            <div class="review-box bottomani">
+                <i class="fa fa-quote-right quote" aria-hidden="true"></i>
+                <i class="fa fa-quote-right quote" aria-hidden="true"></i>
+                <div class="top">
+                    <img src="images/reveiwer1.jpg" alt="Revisor Tom Stepher">
+                    <div class="right">
+                        <div class="name"><span>Tom Stepher</span> <br> <small>Cliente Verificado</small></div>
+                        <div class="stars">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="text">“El helado  es como una sinfonía para tus papilas gustativas. ¿El remolino de caramelo salado? ¡Divino!”
+                </div>
+            </div>
+            <div class="review-box bottomani">
+                <i class="fa fa-quote-right quote" aria-hidden="true"></i>
+                <i class="fa fa-quote-right quote" aria-hidden="true"></i>
+                <div class="top">
+                    <img src="images/reveiwer1.jpg" alt="Revisor Tom Stepher">
+                    <div class="right">
+                        <div class="name"><span>Tom Stepher</span> <br> <small>Cliente Verificado</small></div>
+                        <div class="stars">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="text">“El helado  es como una sinfonía para tus papilas gustativas. ¿El remolino de caramelo salado? ¡Divino!”
+                </div>
+            </div>
+
+            <div class="review-box bottomani">
+                <i class="fa fa-quote-right quote" aria-hidden="true"></i>
+                <div class="top">
+                    <img src="images/reveiwer4.webp" alt="">
+                    <div class="right">
+                        <div class="name"><span>Oliviya Lee</span> <br> <small>Cliente Verificado</small></div>
+                        <div class="stars">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text">“¡Visité aquí en un día caluroso! El chocolate con menta me llevó directamente al cielo.”</div>
+            </div>
+
+            <div class="review-box bottomani"><i class="fa fa-quote-right quote" aria-hidden="true"></i>
+                <div class="top">
+                    <img src="images/reveiwer2.jpg" alt="">
+                    <div class="right">
+                        <div class="name"><span>Andrew johnson</span> <br> <small>Cliente Verificado</small></div>
+                        <div class="stars">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text">“El gelato de pistacho aquí es un nirvana de nuez. Cierra los ojos y saborea la
+                    bondad verde.”</div>
+            </div>
+
+            <div class="review-box bottomani">
+                <i class="fa fa-quote-right quote" aria-hidden="true"></i>
+                <div class="top">
+                    <img src="images/reveiwer5.jpg" alt="">
+                    <div class="right">
+                        <div class="name"><span>Mia Patal</span> <br> <small>Cliente Verificado</small></div>
+                        <div class="stars">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="text">“Compartí una doble bola con mi enamorado. Amé la fresa y el chocolate oscuro.”</div>
+            </div>
+
+            <div class="review-box bottomani">
+                <i class="fa fa-quote-right quote" aria-hidden="true"></i>
+                <div class="top">
+                    <img src="images/reveiwer3.jpg" alt="">
+                    <div class="right">
+                        <div class="name"><span>Nicolas Cage</span> <br> <small>Cliente Verificado</small></div>
+                        <div class="stars">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text">"Por el nombre mismo, estos helados aquí son los mejores en calidad y sabor, por supuesto."
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- contacto -->
+    <section class="contact" id="contact">
+        <h1>Contáctanos</h1>
+        <form action="#" novalidate class="box-container bottomani" id="contact-form">
+            <div class="row">
+                <div class="input-box">
+                    <label for="fname">Tu Nombre</label><br>
+                    <input class="dark_bg_txt" type="text" id="fname" placeholder="Ingresa tu nombre"
+                        oninput="this.parentElement.querySelector('small').textContent = ''">
+                    <small class="error" style="color: rgb(255, 0, 0);"></small>
+                </div>
+                <div class="input-box">
+                    <label for="lname">Tu Apellido</label><br>
+                    <input class="dark_bg_txt" type="text" id="lname" placeholder="Ingresa tu apellido"
+                        oninput="this.parentElement.querySelector('small').textContent = ''">
+                    <small class="error" style="color: rgb(255, 0, 0);"></small>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-box">
+                    <label for="email">Tu Correo Electrónico</label><br>
+                    <input class="dark_bg_txt" type="email" id="email" placeholder="ejemplo@gmail.com"
+                        oninput="this.parentElement.querySelector('small').textContent = ''">
+                    <small class="error" style="color: rgb(255, 0, 0);"></small>
+                </div>
+                <div class="input-box">
+                    <label for="phone">Tu Número de Contacto</label><br>
+                    <input class="dark_bg_txt" type="tel" id="phone" placeholder="Ingresa tu número de contacto" maxlength="12"
+                        oninput="this.parentElement.querySelector('small').textContent = ''">
+                    <small class="error" style="color: rgb(255, 0, 0);"></small>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-box">
+                    <label for="message">Tu Mensaje</label><br>
+                    <textarea class="dark_bg_txt" name="" id="message" cols="30" rows="10"
+                        placeholder="Ingresa tu mensaje aquí"
+                        oninput="this.parentElement.querySelector('small').textContent = ''"></textarea>
+                    <small class="error" style="color: rgb(255, 0, 0);"></small>
+                </div>
+            </div>
+            <div class="row">
+                <input type="submit" value="Enviar">
+            </div>
+        </form>
+    </section>
+
+    <!-- pie de página -->
+    <section class="footer">
+        
+    <!-- derechos de autor -->
+    <div class="copyright">
+        &copy; <span id="year"></span> por <span>Emerson Cercado </span> | Todos los Derechos Reservados
+    </div>
+
+    <!-- Tostadora -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <!-- archivos de script -->
+    <script src="script/contact.js"></script>
+    <script type="module" src="script/products.js"></script>
+    <script type="module" src="script/nav.js"></script>
+    <script type="module" src="script/cart.js"></script>
+    <script src="script/FAQ.js"></script>
+    <script src="script/topscrollindicator.js"></script>
+    <script src="script/popup.js"></script>
+    <script type="module" src="script/flavor_section.js"></script>
+    <script src="script/cursor.js"></script>
+    <script src="script/script.js"></script>
+
+</body>
+
+</html>
